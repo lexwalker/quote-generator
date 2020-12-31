@@ -21,8 +21,7 @@ function hideLoadingSpinner() {
 async function getQuote() {
   showLoadingSpinner();
   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  const apiUrl =
-    "http://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=json";
+  const apiUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=json";
   try {
     const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
@@ -50,11 +49,11 @@ function postingQuote() {
   // Open window for posting
   if (vkUrl) {
     // Set Window size
-    var width = 800,
+    const width = 800,
       height = 500;
     // Center window
-    var left = (window.screen.width - width) / 2;
-    var top = (window.screen.height - height) / 2;
+    const left = (window.screen.width - width) / 2;
+    const top = (window.screen.height - height) / 2;
     // Open window
     socialWindow = window.open(
       vkUrl,
